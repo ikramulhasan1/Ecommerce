@@ -27,7 +27,7 @@ class CategoryController extends Controller
         try {
             $data = $request->all();
             Category::create($data);
-            return redirect()->route('category.index')->withSuccess('category successfully created');
+            return redirect()->route('categories.index')->withSuccess('category successfully created');
 
         } catch (Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());

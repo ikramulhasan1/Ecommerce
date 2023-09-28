@@ -12,7 +12,15 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Category Table</h5>
-                        <span><a href="{{ route('category.create') }}" class=" btn btn-primary btn-sm">New Category</a></span>
+                        <div class="d-flex ">
+                            <span class="me-2"><a href="{{ route('categories.create') }}"
+                                    class=" btn btn-primary btn-sm">New
+                                    Category</a></span>
+                            <a href="{{ route('category.pdf_report') }}" class="btn btn-warning btn-sm me-2"><i
+                                    class="fa-solid fa-file-pdf"></i> PDF</a>
+                            <a href="{{ route('category.excel_report') }}" class="btn btn-warning btn-sm"><i
+                                    class="fa-solid fa-file-pdf"></i> EXCEL</a>
+                        </div>
                     </div>
                     <!-- Table with stripped rows -->
                     <table class="table table-striped">

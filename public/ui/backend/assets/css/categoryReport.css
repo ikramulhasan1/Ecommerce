@@ -1,0 +1,48 @@
+/* html,
+body {
+    height: 100%;
+} */
+
+body {
+    margin: 0;
+    background-color: rgb(255, 248, 239);
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+/*
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+table {
+    width: 800px;
+    border: 2px solid black;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    padding: 15px;
+    background-color: #585858;
+    color: rgb(255, 255, 255);
+}
+
+td {
+    padding: 15px;
+    background-color: #F2F2F2;
+    color: black;
+}
+
+th {
+    text-align: left;
+}
+
+/* thead {
+    th {
+        background-color: #55608f;
+    }
+} */

@@ -9,7 +9,7 @@
                     <h5 class="card-title">Category Create</h5>
 
                     <!-- Vertical Form -->
-                    <form action="{{ route('category.store') }}" method="POST" class="row g-3">
+                    <form action="{{ route('categories.store') }}" method="POST" class="row g-3">
                         @csrf
                         <div class="col-12">
                             <label for="inputNanme4" class="form-label">Name</label>

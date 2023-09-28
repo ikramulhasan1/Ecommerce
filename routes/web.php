@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 
@@ -33,11 +33,16 @@ Route::middleware(['auth'])->group(function () {
         return view('backend.users');
     });
     // Category routes
-    Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
-    Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
-    Route::post('/category', [CategoryController::class, 'store'])->name('category.store');
-    Route::get('/category/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
-    Route::post('/category/{id}', [CategoryController::class, 'update'])->name('category.update');
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+    Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+    Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('/categories/{id}', [CategoryController::class, 'update'])->name('category.update');
+
+
+    // report
+    Route::get('category/pdf-report', [ReportController::class, 'categoryPDFReport'])->name('category.pdf_report');
+    Route::get('category/excel-report', [ReportController::class, 'categoryExcelReport'])->name('category.excel_report');
 
 });
 
